@@ -1,0 +1,28 @@
+h1 Listing yachts
+
+table
+  thead
+    tr
+      th Name
+      th Type
+      th Size
+      th Company
+      th
+      th
+      th
+      th
+
+  tbody
+    - @yachts.each do |yacht|
+      tr
+        td = yacht.name
+        td = yacht.type_id
+        td = yacht.size
+        td = yacht.company_id
+        td = link_to 'Show', yacht
+        td = link_to 'Edit', edit_yacht_path(yacht)
+        td = link_to 'Destroy', yacht, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Yacht', new_yacht_path

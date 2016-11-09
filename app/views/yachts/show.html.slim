@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @yacht.name
+p
+  strong Type:
+  = @yacht.type.name
+p
+  strong Size:
+  = @yacht.size
+
+= link_to 'Edit', edit_yacht_path(@yacht)
+'|
+= link_to 'Back', yachts_path

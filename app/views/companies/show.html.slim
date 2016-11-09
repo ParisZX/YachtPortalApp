@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Username:
+  = @company.username
+p
+  strong Company name:
+  = @company.company_name
+p
+  strong Email:
+  = @company.email
+p
+  strong Password:
+  = @company.password
+
+= link_to 'Edit', edit_company_path(@company)
+'|
+= link_to 'Back', companies_path
